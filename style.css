@@ -1,0 +1,156 @@
+/*
+Coded by Dogukan Bey 2021*
+Tek Sayfalık Stresser Projesi / One Page Stresser Project
+İletişim / Contact: Instagram @dogukaan1337
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #0a0c18;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  flex: 1;
+  max-width: 450px;
+}
+.wrapper > div {
+  background: #283060;
+  color: #fff;
+  text-align: center;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.wrapper > div h3 {
+  letter-spacing: 1px;
+  padding: 30px;
+  font-size: 2.5em;
+}
+.wrapper .login-form {
+  background: #ecedf7;
+  padding: 30px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.wrapper .login-form h5 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.wrapper .login-form h5 a {
+  color: #4654a8;
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 400;
+  text-decoration: none;
+  outline: none;
+}
+.wrapper .login-form h5 a span {
+  font-style: italic;
+  text-decoration: underline;
+  color: #283060;
+}
+.wrapper .login-form .btn-submit {
+  display: block;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  border: 1px solid #283060;
+  border-radius: 5px;
+  margin-top: 50px;
+  font-size: 1.5em;
+  line-height: 2;
+  color: #fff;
+  background: #283060;
+  transition: 0.3s;
+}
+.wrapper .login-form .btn-submit:hover {
+  box-shadow: 0 6px 12px -3px rgba(9, 30, 66, 0.4);
+  transform: translate(0, -3px);
+  background: #303972;
+}
+
+.input-field {
+  position: relative;
+  margin: 25px 0;
+  padding-left: 30px;
+  color: #4654a8;
+}
+.input-field input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  width: 100%;
+  font-size: 1.4em;
+  height: 40px;
+  border-bottom: 1px solid #8791cd;
+  color: inherit;
+  transition: 0.2s ease;
+}
+.input-field input::-moz-placeholder {
+  color: transparent;
+}
+.input-field input:-ms-input-placeholder {
+  color: transparent;
+}
+.input-field input::placeholder {
+  color: transparent;
+}
+.input-field input:not(:-moz-placeholder-shown) {
+  border-bottom: 1px solid #283060;
+  box-shadow: 0 1px 0 0 #283060;
+}
+.input-field input:not(:-ms-input-placeholder) {
+  border-bottom: 1px solid #283060;
+  box-shadow: 0 1px 0 0 #283060;
+}
+.input-field input:focus, .input-field input:not(:placeholder-shown) {
+  border-bottom: 1px solid #283060;
+  box-shadow: 0 1px 0 0 #283060;
+}
+.input-field input:not(:-moz-placeholder-shown) + label {
+  transform: translateY(-14px) scale(0.85);
+  color: #283060;
+}
+.input-field input:not(:-ms-input-placeholder) + label {
+  transform: translateY(-14px) scale(0.85);
+  color: #283060;
+}
+.input-field input:focus + label, .input-field input:not(:placeholder-shown) + label {
+  transform: translateY(-14px) scale(0.85);
+  color: #283060;
+}
+.input-field label {
+  color: #8791cd;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  font-size: 1em;
+  cursor: text;
+  transform-origin: 0% 100%;
+  transform: translateY(14px);
+  transition: 0.2s ease-out;
+}
+.input-field i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.2em;
+  width: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8791cd;
+}
