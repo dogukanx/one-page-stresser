@@ -24,8 +24,7 @@ Tek Sayfalık Stresser Projesi / One Page Stresser Project
 				$time = htmlspecialchars($_POST['time']);
 				$method = htmlspecialchars($_POST['method']);
 				if(empty($host) || empty($port) || empty($time) || empty($method)){
-				echo '<h4 style=color:green; text-align: center;> Lütfen tüm alanları doldurun.';
-				die();
+				echo '<h4 style=color:red; text-align: center;> Lütfen tüm alanları doldurun.';
 				}else{
 				if($time <= 300){ // Max saldırı süresini belirler
 
